@@ -25,8 +25,10 @@ module.exports = class totalizador{
         return this.cantidad * this.precio;
     }
     get_descuento(){
-        if(this.cantidad>=1000){
+        if(this.cantidad>=1000 && this.cantidad < 3000){
             return 0.3;
+        }else if(this.cantidad>=3000){
+            return 0.5;
         }
 
     }
