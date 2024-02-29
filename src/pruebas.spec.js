@@ -14,5 +14,9 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(5,20,"NV");
     expect(totalizar.get_estado()).toEqual("NV");
   });
+  it("Si la cantidad ingresada es negativa me genera NULL: generar(-1) => null", () => {
+    let totalizar = new totalizador(-1,20,"NV");
+    expect(totalizar.get_cantidad()).toEqual(null);
+  });
  
 });
