@@ -26,21 +26,25 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(20, 3,"NV");
     expect(totalizar.get_precio_neto()).toEqual(60);
   });
-  it("Calculamos el descuento de 3% (1000 unidades), ejemplo: generar(1000, 3, NV) => 60", () => {
+  it("Calculamos el descuento de 3% (1000 unidades), ejemplo: generar(1000, 3, NV) => 0.03", () => {
     let totalizar = new totalizador(1000, 3,"NV");
     expect(totalizar.get_descuento()).toEqual(0.03);
   });
-  it("Calculamos el descuento de 5% (3000 unidades), ejemplo: generar(3000, 3, NV) => 60", () => {
+  it("Calculamos el descuento de 5% (3000 unidades), ejemplo: generar(3000, 3, NV) => 0.05", () => {
     let totalizar = new totalizador(3000, 3,"NV");
     expect(totalizar.get_descuento()).toEqual(0.05);
   });
-  it("Calculamos el descuento de 7% (7000 unidades), ejemplo: generar(7000, 3, NV) => 60", () => {
+  it("Calculamos el descuento de 7% (7000 unidades), ejemplo: generar(7000, 3, NV) => 0.07", () => {
     let totalizar = new totalizador(7000, 3,"NV");
     expect(totalizar.get_descuento()).toEqual(0.07);
   });
-  it("Calculamos el descuento de 10% (10000 unidades), ejemplo: generar(10000, 3, NV) => 60", () => {
+  it("Calculamos el descuento de 10% (10000 unidades), ejemplo: generar(10000, 3, NV) => 0.1", () => {
     let totalizar = new totalizador(10000, 3,"NV");
     expect(totalizar.get_descuento()).toEqual(0.1);
+  });
+  it("Calculamos el descuento de 15% (30000 unidades), ejemplo: generar(30000, 3, NV) => 0.15", () => {
+    let totalizar = new totalizador(30000, 3,"NV");
+    expect(totalizar.get_descuento()).toEqual(0.15);
   });
  
 });
