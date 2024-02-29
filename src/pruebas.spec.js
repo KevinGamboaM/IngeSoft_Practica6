@@ -28,15 +28,19 @@ describe("Totalizador", () =>{
   });
   it("Calculamos el descuento de 3% (1000 unidades), ejemplo: generar(1000, 3, NV) => 60", () => {
     let totalizar = new totalizador(1000, 3,"NV");
-    expect(totalizar.get_descuento()).toEqual(0.3);
+    expect(totalizar.get_descuento()).toEqual(0.03);
   });
   it("Calculamos el descuento de 5% (3000 unidades), ejemplo: generar(3000, 3, NV) => 60", () => {
     let totalizar = new totalizador(3000, 3,"NV");
-    expect(totalizar.get_descuento()).toEqual(0.5);
+    expect(totalizar.get_descuento()).toEqual(0.05);
   });
   it("Calculamos el descuento de 7% (7000 unidades), ejemplo: generar(7000, 3, NV) => 60", () => {
     let totalizar = new totalizador(7000, 3,"NV");
-    expect(totalizar.get_descuento()).toEqual(0.7);
+    expect(totalizar.get_descuento()).toEqual(0.07);
+  });
+  it("Calculamos el descuento de 10% (10000 unidades), ejemplo: generar(10000, 3, NV) => 60", () => {
+    let totalizar = new totalizador(10000, 3,"NV");
+    expect(totalizar.get_descuento()).toEqual(0.1);
   });
  
 });
