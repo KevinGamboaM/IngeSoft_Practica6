@@ -21,6 +21,9 @@ module.exports = class totalizador{
     get_estado(){
         return this.estado;
     }
+    get_precio_neto(){
+        return this.cantidad * this.precio;
+    }
 
   }
   
