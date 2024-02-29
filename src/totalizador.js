@@ -41,7 +41,9 @@ module.exports = class totalizador{
     get_impuesto(){
         if(this.estado=="UT"){
             return 0.0665;
-        }        
+        }else if(this.estado=="NV"){
+            return 0.08;
+        }            
 
     }
 
