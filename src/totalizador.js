@@ -54,6 +54,9 @@ module.exports = class totalizador{
         }                  
 
     }
+    get_total(){
+        return this.get_precio_neto()*this.get_descuento()+this.get_precio_neto()*this.get_impuesto();
+    }
 
 
   }
