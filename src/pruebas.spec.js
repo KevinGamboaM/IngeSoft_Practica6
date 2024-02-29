@@ -6,4 +6,8 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(1);
     expect(totalizar.get_cantidad()).toEqual(1);
   });
+  it("Si genero la cantidad, me genera la cantidad ejemplo: generar(1) => 1", () => {
+    let totalizar = new totalizador(5,20);
+    expect(totalizar.get_precio()).toEqual(20);
+  });
 });
