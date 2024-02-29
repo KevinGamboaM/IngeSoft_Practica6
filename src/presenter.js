@@ -8,6 +8,7 @@ const form = document.querySelector("#totalizar-form");
 const div = document.querySelector("#resultado-div");
 const div2 = document.querySelector("#resultado-div2");  
 const div3 = document.querySelector("#resultado-div3");  
+const div4 = document.querySelector("#resultado-div4");  
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -21,7 +22,12 @@ form.addEventListener("submit", (event) => {
   }else{
     div2.innerHTML = "<p>ERROR! La cantidad o el precio es negativo.</p>";
   }
-  div3.innerHTML = "<p>Descuento(" + parseInt(totalizar.get_descuento()*100) + "%)" + totalizar.get_precio_neto()*totalizar.get_descuento() + "</p>";
-    
+  if(totalizar.get_descuento()==1){
+    div3.innerHTML = "<p>Descuento(0%) 0 </p>";
+  }else{
+    div3.innerHTML = "<p>Descuento(" + parseInt(totalizar.get_descuento()*100) + "%)" + totalizar.get_precio_neto() * totalizar.get_descuento() + "</p>";
+  }
+    div4.innerHTML = "<p>Impuesto para " + totalizar.get_estado() + "(" + (totalizar.get_impuesto()*100) + "%)" + totalizar.get_precio_neto()*totalizar.get_descuento()*totalizar.get_impuesto() + "</p>";  
+ 
   
 });
