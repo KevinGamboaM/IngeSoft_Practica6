@@ -8,7 +8,8 @@ const form = document.querySelector("#totalizar-form");
 const div = document.querySelector("#resultado-div");
 const div2 = document.querySelector("#resultado-div2");  
 const div3 = document.querySelector("#resultado-div3");  
-const div4 = document.querySelector("#resultado-div4");  
+const div4 = document.querySelector("#resultado-div4");
+const div5 = document.querySelector("#resultado-div5");    
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -27,7 +28,7 @@ form.addEventListener("submit", (event) => {
   }else{
     div3.innerHTML = "<p>Descuento(" + parseInt(totalizar.get_descuento()*100) + "%)" + totalizar.get_precio_neto() * totalizar.get_descuento() + "</p>";
   }
-    div4.innerHTML = "<p>Impuesto para " + totalizar.get_estado() + "(" + (totalizar.get_impuesto()*100) + "%)" + totalizar.get_precio_neto()*totalizar.get_descuento()*totalizar.get_impuesto() + "</p>";  
- 
+  div4.innerHTML = "<p>Impuesto para " + totalizar.get_estado() + "(" + (totalizar.get_impuesto()*100) + "%)" + totalizar.get_precio_neto()*totalizar.get_descuento()*totalizar.get_impuesto() + "</p>";  
+  div5.innerHTML = "<p>PRECIO TOTAL: " + totalizar.get_total() + "</p>";
   
 });
