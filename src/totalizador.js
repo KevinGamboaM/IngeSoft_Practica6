@@ -38,6 +38,13 @@ module.exports = class totalizador{
         }            
 
     }
+    get_impuesto(){
+        if(this.estado=="UT"){
+            return 0.0665;
+        }        
+
+    }
+
 
   }
   

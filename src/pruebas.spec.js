@@ -46,5 +46,9 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(30000, 3,"NV");
     expect(totalizar.get_descuento()).toEqual(0.15);
   });
+  it("Calculamos el impuesto de UT , ejemplo: generar(1000, 3, UT) => 0.665", () => {
+    let totalizar = new totalizador(30000, 3,"UT");
+    expect(totalizar.get_impuesto()).toEqual(0.0665);
+  });
  
 });
