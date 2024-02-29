@@ -26,5 +26,9 @@ describe("Totalizador", () =>{
     let totalizar = new totalizador(20, 3,"NV");
     expect(totalizar.get_precio_neto()).toEqual(60);
   });
+  it("Calculamos el descuento de 3%, ejemplo: generar(1000, 3, NV) => 60", () => {
+    let totalizar = new totalizador(1000, 3,"NV");
+    expect(totalizar.get_descuento()).toEqual(0.3);
+  });
  
 });

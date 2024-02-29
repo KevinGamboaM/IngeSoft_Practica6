@@ -24,6 +24,12 @@ module.exports = class totalizador{
     get_precio_neto(){
         return this.cantidad * this.precio;
     }
+    get_descuento(){
+        if(this.cantidad>=1000){
+            return 0.3;
+        }
+
+    }
 
   }
   
